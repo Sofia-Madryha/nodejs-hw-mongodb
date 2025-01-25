@@ -12,15 +12,15 @@ const contactsSchema = new Schema(
     },
     email: {
       type: String,
-      enum: ['male', 'female', 'other'],
     },
     isFavourite: {
       type: Boolean,
-      required: true,
+      default: false,
     },
     contactType: {
       type: String,
       enum: ['work', 'home', 'personal'],
+      required: true,
       default: 'personal',
     },
   },
