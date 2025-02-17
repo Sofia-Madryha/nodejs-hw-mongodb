@@ -13,6 +13,9 @@ const contactsSchema = new Schema(
     email: {
       type: String,
     },
+    photo: {
+      type: String,
+    },
     isFavourite: {
       type: Boolean,
       default: false,
@@ -23,10 +26,10 @@ const contactsSchema = new Schema(
       required: true,
       default: 'personal',
     },
-    userId: { 
-      type: Schema.Types.ObjectId, 
-      ref: 'users' 
-    }, 
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'users',
+    },
   },
   {
     timestamps: true,
