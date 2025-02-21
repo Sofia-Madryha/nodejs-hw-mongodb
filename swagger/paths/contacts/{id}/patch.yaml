@@ -7,7 +7,7 @@ security:
   - bearerAuth: []
 parameters:
   - in: path
-    name: contactId
+    name: id
     required: true
     schema:
       type: string
@@ -64,7 +64,7 @@ responses:
               type: object
               $ref: '../../../components/schemas/contact.yaml'
   '401':
-    $ref: '../../../components/responses/404.yaml'
+    $ref: '../../../components/responses/401.yaml'
   '404':
     description: Contact not found
     content:
